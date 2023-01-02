@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Serveur_TCPClass</class>
+ <widget class="QMainWindow" name="Serveur_TCPClass">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>937</width>
+    <height>473</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Serveur_TCP</string>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <widget class="QLineEdit" name="lineEdit_IP">
+    <property name="geometry">
+     <rect>
+      <x>120</x>
+      <y>40</y>
+      <width>113</width>
+      <height>20</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="lineEdit_Port">
+    <property name="geometry">
+     <rect>
+      <x>120</x>
+      <y>90</y>
+      <width>113</width>
+      <height>20</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_IP">
+    <property name="geometry">
+     <rect>
+      <x>30</x>
+      <y>40</y>
+      <width>61</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>IP :</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_Port">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>90</y>
+      <width>61</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Port :</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_connexion">
+    <property name="geometry">
+     <rect>
+      <x>120</x>
+      <y>160</y>
+      <width>75</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Connexion</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_status_connection">
+    <property name="geometry">
+     <rect>
+      <x>270</x>
+      <y>50</y>
+      <width>321</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Status de connexion : Déconnecter</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_avancer">
+    <property name="geometry">
+     <rect>
+      <x>670</x>
+      <y>140</y>
+      <width>75</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Avancer</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_reculer">
+    <property name="geometry">
+     <rect>
+      <x>670</x>
+      <y>240</y>
+      <width>75</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Reculer</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_gauche">
+    <property name="geometry">
+     <rect>
+      <x>540</x>
+      <y>190</y>
+      <width>111</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Tourner à gauche</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_droite">
+    <property name="geometry">
+     <rect>
+      <x>770</x>
+      <y>190</y>
+      <width>111</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Tourner à droite</string>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menuBar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>937</width>
+     <height>21</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QToolBar" name="mainToolBar">
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+  </widget>
+  <widget class="QStatusBar" name="statusBar"/>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources>
+  <include location="Serveur_TCP.qrc"/>
+ </resources>
+ <connections>
+  <connection>
+   <sender>pushButton_connexion</sender>
+   <signal>clicked()</signal>
+   <receiver>Serveur_TCPClass</receiver>
+   <slot>onConnectButtonClicked()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>157</x>
+     <y>204</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>299</x>
+     <y>199</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_avancer</sender>
+   <signal>clicked()</signal>
+   <receiver>Serveur_TCPClass</receiver>
+   <slot>onAvancerButtonClicked()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>707</x>
+     <y>184</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>468</x>
+     <y>236</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_reculer</sender>
+   <signal>clicked()</signal>
+   <receiver>Serveur_TCPClass</receiver>
+   <slot>onReculerButtonClicked()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>707</x>
+     <y>284</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>468</x>
+     <y>236</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_droite</sender>
+   <signal>clicked()</signal>
+   <receiver>Serveur_TCPClass</receiver>
+   <slot>onDroitButtonClicked()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>810</x>
+     <y>238</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>468</x>
+     <y>236</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_gauche</sender>
+   <signal>clicked()</signal>
+   <receiver>Serveur_TCPClass</receiver>
+   <slot>onGaucheButtonClicked()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>595</x>
+     <y>238</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>468</x>
+     <y>236</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+ <slots>
+  <slot>onConnectButtonClicked()</slot>
+  <slot>onSendMessageButtonClicked()</slot>
+  <slot>onAvancerButtonClicked()</slot>
+  <slot>onReculerButtonClicked()</slot>
+  <slot>onGaucheButtonClicked()</slot>
+  <slot>onDroitButtonClicked()</slot>
+ </slots>
+</ui>
